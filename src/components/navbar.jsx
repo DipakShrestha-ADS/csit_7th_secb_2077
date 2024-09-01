@@ -19,6 +19,7 @@ export default function Navbar({title}) {
                     <Link to='/settings'><p>Settings</p></Link>
                     <Link to='/profile'><p>Profile</p></Link>
                     <Link to='/downloads'><p>Downloads</p></Link>
+                    <Link to='/login'><p>Login</p></Link>
                 </div>
             </div>
         </>
