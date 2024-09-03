@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../styles/login.css'
+import { Link } from 'react-router-dom'
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -7,7 +8,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("submitted")
-        if(password.length < 6){
+        if (password.length < 6) {
             alert("Password must be at least 6 characters long")
             return
         }
@@ -32,7 +33,8 @@ const Login = () => {
                     <input type='password' placeholder='Enter your password' name='password' onChange={handleOnPasswordChange} value={password} required />
                 </div>
                 <div>
-                    <input id='login-button' type='submit' value="Login"/>
+                    <input id='login-button' type='submit' value="Login" />
+                    <p style={{ textAlign: 'center', color: 'teal', fontSize: '14px', marginTop: '15px'}}>Already have an account? <Link to='/register'>Sign Up</Link></p>
                 </div>
             </div>
         </form>
