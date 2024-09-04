@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../styles/login.css'
 import { Link } from 'react-router-dom'
+import CustomFormField from '../components/custom_form_field'
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -24,14 +25,8 @@ const Login = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div id="container">
-                <div className='field'>
-                    <label for="email">Email</label><br />
-                    <input type='email' placeholder="Enter your email" name='email' onChange={handleOnEmailChange} value={email} required />
-                </div>
-                <div className='field'>
-                    <label for="password">Password</label><br />
-                    <input type='password' placeholder='Enter your password' name='password' onChange={handleOnPasswordChange} value={password} required />
-                </div>
+                <CustomFormField label="Email" placeholder="Enter your email" type="email" value={email} cName="email" onChange={handleOnEmailChange}/>
+                <CustomFormField label="Password" placeholder="Enter your password" type="password" value={password} cName="password" onChange={handleOnPasswordChange}/>
                 <div>
                     <input id='login-button' type='submit' value="Login" />
                     <p style={{ textAlign: 'center', color: 'teal', fontSize: '14px', marginTop: '15px'}}>Already have an account? <Link to='/register'>Sign Up</Link></p>

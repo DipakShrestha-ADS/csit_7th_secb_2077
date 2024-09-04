@@ -25,3 +25,28 @@
     justify-content: space-between;
     align-items: center;
 }
+#gender{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.g{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+}
+.g input{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+#reg-button{
+    display: flex;
+    justify-content: center;
+}
+#reg-button input{
+    background-color: chocolate;
+    color: white;
+    font-size: 18px;
+}
