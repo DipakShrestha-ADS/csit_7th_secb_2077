@@ -11,6 +11,8 @@ import Profile from './pages/profile';
 import Documents from './pages/documents';
 import Login from './pages/login';
 import Register from './pages/register';
+import UserCard from './components/UserCard';
+import Users from './pages/user';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +27,7 @@ root.render(
           <Route path='profile' element={<Profile/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='register' element={<Register/>}/>
+          <Route path='user' element={<Users/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
