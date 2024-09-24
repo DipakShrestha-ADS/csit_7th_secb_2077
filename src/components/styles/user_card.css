@@ -10,6 +10,9 @@
     padding: 10px 20px;
     background-color: navy;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .user-info{
     font-size: 18px;

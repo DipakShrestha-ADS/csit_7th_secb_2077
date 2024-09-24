@@ -13,7 +13,6 @@ const Users = () => {
                 console.log("users : ", users)
                 setAllUsers(() => users)
             })
-
         },
         []
     )

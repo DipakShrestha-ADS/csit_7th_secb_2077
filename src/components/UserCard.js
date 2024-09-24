@@ -1,10 +1,12 @@
 import './styles/user_card.css'
-const UserCard = ({user}) => {
+const UserCard = ({ user }) => {
     return (
         <div className='user-card'>
             <div className='user-title'>
-                <h1>{user['name']}</h1>
-                <p>{user['username']}</p>
+                <div>
+                    <h1>{user['name']}</h1>
+                    <p>{user['username']}</p>
+                </div>
             </div>
             <div className='user-info'>
                 <UserInfo title="Email" value={user.email} />
@@ -12,7 +14,7 @@ const UserCard = ({user}) => {
                 <UserInfo title="Website" value={user.website} />
             </div>
             <div className='user-address'>
-                <UserInfo title="Address" value={user.address.street}/>
+                <UserInfo title="Address" value={user.address.street} />
             </div>
             <div className='user-company'>
                 <UserInfo title="Company" value={user.company.name} />
@@ -24,11 +26,11 @@ const UserCard = ({user}) => {
 }
 export default UserCard
 
-const UserInfo = ({ title, value , extra}) => {
+const UserInfo = ({ title, value, extra }) => {
     return (
         <p>
             {!extra && <strong>{title}: </strong>}
-            {extra &&  <br/>}
+            {extra && <br />}
             {value}
         </p>
     );
