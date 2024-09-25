@@ -1,0 +1,17 @@
+.post-card{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 3px rgba(179, 235, 66, 0.656);
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+.post-id{
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+    text-shadow: 1px 1px red;
+}
+.post-id::after{
+    content: ".";
+}
